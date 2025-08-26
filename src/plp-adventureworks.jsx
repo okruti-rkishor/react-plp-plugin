@@ -5,7 +5,10 @@ import {useLocation, useParams} from "react-router";
 import ProductCard from "./product-card";
 import RefinerSorter from "./refiners-sort";
 import Dropdown from './dropdown'
-const fetchAppProductsBaseURL = "/Commerce/Products/SearchByCriteria?$top=5&$count=true&$orderby=Attr_5637148327%20desc"
+
+// when run locally use VITE_BASE_URL and deployment VITE_BASE_URL_PROD
+const fetchAppProductsBaseURL = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/Products/SearchByCriteria?$top=5&$count=true&$orderby=Attr_5637148327%20desc`
+
 const hideRating = false
 
 const sortOptions = {
