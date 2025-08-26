@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/Commerce/:path*",
+      "destination": "https://scujxlc8zs397019114-rs.su.retail.dynamics.com/Commerce/:path*"
+    }
+  ]
+}
