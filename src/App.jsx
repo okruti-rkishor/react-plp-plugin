@@ -3,9 +3,10 @@ import {useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import CategoryCard from "./category-card";
-const categoryPageBaseUrl = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/Categories/GetCategories?$top=1000&api-version=7.3`
-const fetchInventoryURL = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/GetInventoryConfiguration()`
-
+// const categoryPageBaseUrl = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/Categories/GetCategories?$top=1000&api-version=7.3`
+// const fetchInventoryURL = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/GetInventoryConfiguration()`
+const categoryPageBaseUrl = `/api/commerce/Categories/GetCategories?$top=1000&api-version=7.3`;
+const fetchInventoryURL = `/api/commerce/GetInventoryConfiguration()`;
 
 function App() {
     const [categories, setCategories] = useState([])

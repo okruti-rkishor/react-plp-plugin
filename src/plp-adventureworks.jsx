@@ -7,7 +7,7 @@ import RefinerSorter from "./refiners-sort";
 import Dropdown from './dropdown'
 
 // when run locally use VITE_BASE_URL and deployment VITE_BASE_URL_PROD
-const fetchAppProductsBaseURL = `${import.meta.env.VITE_BASE_URL_PROD}Commerce/Products/SearchByCriteria?$top=5&$count=true&$orderby=Attr_5637148327%20desc`
+const fetchAppProductsBaseURL = `/api/commerce/Products/SearchByCriteria?$top=5&$count=true&$orderby=Attr_5637148327%20desc`
 
 const hideRating = false
 
