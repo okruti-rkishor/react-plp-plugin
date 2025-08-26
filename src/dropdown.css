@@ -1,0 +1,41 @@
+/* Dropdown container */
+.custom-dropdown {
+    display: inline-block;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+/* Ant Design select itself */
+.custom-dropdown .ant-select-selector {
+    border-radius: 8px !important;   /* rounded corners */
+    border: 1px solid #d9d9d9 !important; /* subtle border */
+    padding: 4px 12px !important;
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover and focus */
+.custom-dropdown .ant-select-selector:hover,
+.custom-dropdown .ant-select-focused .ant-select-selector {
+    border-color: #1677ff !important;  /* AntD primary blue */
+    box-shadow: 0 0 4px rgba(22, 119, 255, 0.4);
+}
+
+/* Dropdown arrow */
+.custom-dropdown .ant-select-arrow {
+    color: #555;
+}
+
+/* Options inside dropdown */
+.custom-dropdown .ant-select-item-option {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.custom-dropdown .ant-select-item-option-selected {
+    background-color: #f0f6ff !important;
+    font-weight: 500;
+    color: #1677ff;
+}
