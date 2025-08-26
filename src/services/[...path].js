@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     try {
         // Capture the path after /api/commerce/*
         const { path = [] } = req.query;
-        const targetUrl = `${DYNAMICS_BASE}/${(Array.isArray(path) ? path.join("/") : path)}`;
-
-        // Forward headers (add your required headers like Authorization if needed)
+        const queryString = req.url.split("?")[1] || "";
+        const targetUrl = `${DYNAMICS_BASE}/${(Array.isArray(path) ? path.join("/") : path)}${queryString ? `?${queryString}` : ""}`;
+// Forward headers (add your required headers like Authorization if needed)
         const headers = {
             "Content-Type": "application/json",
             ...(req.headers.authorization ? { Authorization: req.headers.authorization } : {})
